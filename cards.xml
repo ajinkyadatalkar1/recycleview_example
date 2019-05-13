@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Each card view will have its own layout. Each layout will have its components such as imagesViews and TextViews.
+Each card is required to have a layout so that the elements inside the cards can be arranged.
+Cards are called inside the recycler view with the help of adapters.
+-->
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:padding="20dp"
+    android:layout_margin="10dp"
+    android:id="@+id/recyclerView"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+        
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="6dp"
+            android:id="@+id/imageView"/>
+
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="-1dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:text="Line1"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:text="Line2"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
